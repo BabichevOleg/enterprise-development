@@ -3,22 +3,22 @@ namespace CarRentalApp.Domain;
 public class Client
 {
     // <summary>
-    // ID клиента
+    // ID РєР»РёРµРЅС‚Р°
     // </summary>
     public required int id { set; get; }
 
     // <summary>
-    // Номер паспорта 
+    // РЅРѕРјРµСЂ РїР°СЃРїРѕСЂС‚Р° 
     // </summary>
     public required int PassportNumber { set; get; }
 
     // <summary>
-    // ФИО
+    // Р¤РРћ
     // </summary>
     public required string FullName { set; get; }
 
     // <summary>
-    // Дата рождения 
+    // Р”Р°С‚Р° СЂРѕР¶РґРµРЅРёСЏ 
     // </summary>
     public required DateOnly BirthDate { set; get; }
 

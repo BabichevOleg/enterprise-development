@@ -6,7 +6,7 @@ public class CarRentalTest(TestDataProvider testDataProvider) : IClassFixture<Te
     private readonly TestDataProvider _testDataProvider = testDataProvider;
 
     //<summary>
-    //Проверка возврата числа всех автомобилей.
+    //РџСЂРѕРІРµСЂРєР° РІРѕР·РІСЂР°С‚Р° РІСЃРµС… Р°РІС‚РѕРјРѕР±РёР»РµР№.
     //</summary>
     [Fact]
     public void NumberOfCars()
@@ -16,7 +16,7 @@ public class CarRentalTest(TestDataProvider testDataProvider) : IClassFixture<Te
     }
 
     //<summary>
-    //Проверка возврата клиентов, арендовавших машину определенной модели.
+    //РџСЂРѕРІРµСЂРєР° РІРѕР·РІСЂР°С‚Р° РєР»РёРµРЅС‚РѕРІ, Р°СЂРµРЅРґРѕРІР°РІС€РёС… РјР°С€РёРЅСѓ РѕРїСЂРµРґРµР»РµРЅРЅРѕР№ РјРѕРґРµР»Рё.
     //</summary>
     [Fact]
     public void ClientsWhoHaveRentedCarsSpecialMarks()
@@ -32,7 +32,7 @@ public class CarRentalTest(TestDataProvider testDataProvider) : IClassFixture<Te
     }
 
     //<summary>
-    //Проверка возврата автомобилей, находящихся в аренде.
+    //РџСЂРѕРІРµСЂРєР° РІРѕР·СЂР°С‚Р° Р°РІС‚РѕРјРѕР±РёР»РµР№, РЅР°С…РѕРґРёРІС€РёС…СЃСЏ РІ Р°СЂРµРЅРґРµ.
     //</summary>
     [Fact]
     public void CarsInRent()
@@ -46,7 +46,7 @@ public class CarRentalTest(TestDataProvider testDataProvider) : IClassFixture<Te
     }
 
     //<summary>
-    //Проверка возврата информации о топ-5 наиболее арендуемых автомобилях.
+    //РџСЂРѕРІРµСЂРєР° РІРѕР·РІСЂР°С‚Р° РёРЅС„РѕСЂРјР°С†РёРё Рѕ С‚РѕРї-5 РЅР°РёР±РѕР»РµРµ Р°СЂРµРЅРґСѓРµРјС‹С… Р°РІС‚РѕРјРѕР±РёР»РµС….
     //</summary>
     [Fact]
     public void TopFiveCars()
@@ -65,7 +65,7 @@ public class CarRentalTest(TestDataProvider testDataProvider) : IClassFixture<Te
     }
 
     //<summary>
-    //Проверка возврата количества аренд для каждого автомобиля.
+    //РџСЂРѕРІРµСЂРєР° РІРѕР·РІСЂР°С‚Р° РєРѕР»РёС‡РµСЃС‚РІР° Р°СЂРµРЅРґ РґР»СЏ РєРѕРЅРєСЂРµС‚РЅРѕРіРѕ Р°РІС‚РѕРјРѕР±РёР»СЏ.
     //</summary>
     [Fact]
     public void NumbersOfRental()
@@ -84,7 +84,7 @@ public class CarRentalTest(TestDataProvider testDataProvider) : IClassFixture<Te
     }
 
     /// <summary>
-    /// Проверка возврата пунктов проката с максимальным числом аренд.
+    ///РџСЂРѕРІРµСЂРєР° РІРѕР·РІСЂР°С‚Р° РїСѓРЅРєС‚Р° РїСЂРѕРєР°С‚Р° СЃ РјР°РєСЃРёРјР°Р»СЊРЅС‹Рј С‡РёСЃР»РѕРј Р°СЂРµРЅРґ.
     /// </summary>
     [Fact]
     public void RentalPlaceWithMostRents()
