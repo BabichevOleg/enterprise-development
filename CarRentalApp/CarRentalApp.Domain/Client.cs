@@ -1,26 +1,26 @@
 namespace CarRentalApp.Domain;
 
-public class Clients
+public class Client
 {
     // <summary>
     // ID клиента
     // </summary>
-    public required int? ID { set; get; }
+    public required int id { set; get; }
 
     // <summary>
     // Номер паспорта 
     // </summary>
-    public required int? PassportNumber { set; get; }
+    public required int PassportNumber { set; get; }
 
     // <summary>
     // ФИО
     // </summary>
-    public required string? FullName { set; get; }
+    public required string FullName { set; get; }
 
     // <summary>
     // Дата рождения 
     // </summary>
-    public required DateOnly? BirthDate { set; get; }
+    public required DateOnly BirthDate { set; get; }
 
 }
 

@@ -1,26 +1,26 @@
 ﻿namespace CarRentalApp.Domain;
 
-public class Cars
+public class Car
 {
     // <summary>
     // ID машины 
     // </summary>
-    public required int ID { set; get; } 
+    public required int id { set; get; } 
 
     // <summary>
     // Номер машины 
     // </summary>
-    public required string? Number { set; get; }
+    public required string Number { set; get; }
 
     // <summary>
     // Модель машины 
     // </summary>
-    public required string? Model { set; get; }
+    public required string Model { set; get; }
 
     // <summary>
     // Цвет машины 
     // </summary>
-    public required string? Color { set; get; }
+    public required string Color { set; get; }
     
 }
 

@@ -1,21 +1,21 @@
 namespace CarRentalApp.Domain;
 
-public class RentalPlaces
+public class RentalPlace
 {
     // <summary>
     // ID
     // </summary>
-    public required int? ID { set; get; }
+    public required int id { set; get; }
 
     // <summary>
     // Название 
     // </summary>
-    public required string? Name { set; get; }
+    public required string Name { set; get; }
 
 	// <summary>
 	// Адрес
 	// </summary>
-	public required string? Address { set; get; }
+	public required string Address { set; get; }
 
 }
 

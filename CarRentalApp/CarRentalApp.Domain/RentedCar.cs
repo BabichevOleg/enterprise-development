@@ -1,46 +1,46 @@
 namespace CarRentalApp.Domain;
 
-public class RentedCars
+public class RentedCar
 {
     // <summary>
     // ID аренды
     // </summary>
-    public required int? ID { set; get; }
+    public required int id { set; get; }
 
     // <summary>
     // Выданный автомобиль 
     // </summary>
-    public required Cars? Car { set; get; }
+    public required Car Car { set; get; }
 
     // <summary>
     // Пункт проката
     // </summary>
-    public required RentalPlaces? RentalPlace { set; get; }
+    public required RentalPlace RentalPlace { set; get; }
 
     // <summary>
     // Клиент получивший машину
     // </summary>
-    public required Clients? Client { set; get; }
+    public required Client Client { set; get; }
 
     // <summary>
     // Время выдачи
     // </summary>
-    public required DateTime? IssueTime { set; get; }
+    public required DateTime IssueTime { set; get; }
 
     // <summary>
     // Срок аренды
     // </summary>
-    public required TimeSpan? RentalPeriod { set; get; }
+    public TimeSpan? RentalPeriod { set; get; }
 
     // <summary>
     // Время возврата
     // </summary>
-    public required DateTime? ReturnTime { set; get; }
+    public DateTime? ReturnTime { set; get; }
 
     // <summary>
     // Пункт, в который возвращают
     // </summary>
-    public required RentalPlaces? ReturnRentalPlace { set; get; }
+    public RentalPlace? ReturnRentalPlace { set; get; }
 
 
 }
