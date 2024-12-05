@@ -5,7 +5,7 @@ public class RentalPlace
     // <summary>
     // ID
     // </summary>
-    public required int id { set; get; }
+    public required int Id { set; get; }
 
     // <summary>
     // Названия прокатного пункта

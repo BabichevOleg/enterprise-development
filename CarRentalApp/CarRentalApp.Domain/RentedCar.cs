@@ -5,7 +5,7 @@ public class RentedCar
     // <summary>
     // ID аренды
     // </summary>
-    public required int id { set; get; }
+    public required int Id { set; get; }
 
     // <summary>
     // выданный автомобиль 

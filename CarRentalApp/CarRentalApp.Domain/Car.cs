@@ -5,7 +5,7 @@ public class Car
     // <summary>
     // ID машины 
     // </summary>
-    public required int id { set; get; } 
+    public required int Id { set; get; } 
 
     // <summary>
     // Номер машины 

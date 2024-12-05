@@ -5,7 +5,7 @@ public class Client
     // <summary>
     // ID клиента
     // </summary>
-    public required int id { set; get; }
+    public required int Id { set; get; }
 
     // <summary>
     // номер паспорта 

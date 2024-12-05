@@ -32,7 +32,7 @@ public class CarRentalTest(TestDataProvider testDataProvider) : IClassFixture<Te
     }
 
     //<summary>
-    //Проверка возрата автомобилей, находившихся в аренде.
+    //Проверка возврата автомобилей, находившихся в аренде.
     //</summary>
     [Fact]
     public void CarsInRent()
@@ -46,7 +46,7 @@ public class CarRentalTest(TestDataProvider testDataProvider) : IClassFixture<Te
     }
 
     //<summary>
-    //Проверка возврата информации о топ-5 наиболее арендуемых автомобилех.
+    //Проверка возврата информации о топ-5 наиболее арендуемых автомобилях.
     //</summary>
     [Fact]
     public void TopFiveCars()
@@ -70,17 +70,17 @@ public class CarRentalTest(TestDataProvider testDataProvider) : IClassFixture<Te
     [Fact]
     public void NumbersOfRental()
     {
-        var carsRentaCounts = _testDataProvider.RentedCars
-            .GroupBy(r => r.Car.id)
+        var carsRentalCounts = _testDataProvider.RentedCars
+            .GroupBy(r => r.Car.Id)
             .Select(g => new {Car = g.Key, CarNumber = g.First().Car.Number, Count = g.Count()})
             .OrderBy(x => x.CarNumber)
             .ToList();
-        Assert.Equal(4, carsRentaCounts[0].Count);
-        Assert.Equal(1, carsRentaCounts[1].Count);
-        Assert.Equal(1, carsRentaCounts[2].Count);
-        Assert.Equal(7, carsRentaCounts[3].Count);
-        Assert.Equal(5, carsRentaCounts[4].Count);
-        Assert.Equal(3, carsRentaCounts[5].Count);
+        Assert.Equal(4, carsRentalCounts[0].Count);
+        Assert.Equal(1, carsRentalCounts[1].Count);
+        Assert.Equal(1, carsRentalCounts[2].Count);
+        Assert.Equal(7, carsRentalCounts[3].Count);
+        Assert.Equal(5, carsRentalCounts[4].Count);
+        Assert.Equal(3, carsRentalCounts[5].Count);
     }
 
     /// <summary>
