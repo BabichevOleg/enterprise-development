@@ -4,12 +4,12 @@ public class TestDataProvider
 {
     public List<Car> Cars =
     [
-        new Car { Id = 1, Number = "Number 1", Model = "Model 1", Color = "Color 1"},
-        new Car { Id = 2, Number = "Number 2", Model = "Model 2", Color = "Color 2"},
-        new Car { Id = 3, Number = "Number 3", Model = "Model 3", Color = "Color 3"},
-        new Car { Id = 4, Number = "Number 4", Model = "Model 4", Color = "Color 4"},
-        new Car { Id = 5, Number = "Number 5", Model = "Model 5", Color = "Color 5"},
-        new Car { Id = 6, Number = "Number 6", Model = "Model 6", Color = "Color 6"}
+        new() { Id = 1, Number = "Number 1", Model = "Model 1", Color = "Color 1"},
+        new() { Id = 2, Number = "Number 2", Model = "Model 2", Color = "Color 2"},
+        new() { Id = 3, Number = "Number 3", Model = "Model 3", Color = "Color 3"},
+        new() { Id = 4, Number = "Number 4", Model = "Model 4", Color = "Color 4"},
+        new() { Id = 5, Number = "Number 5", Model = "Model 5", Color = "Color 5"},
+        new() { Id = 6, Number = "Number 6", Model = "Model 6", Color = "Color 6"}
     ];
 
     public List<RentalPlace> RentalPlaces =
@@ -32,13 +32,14 @@ public class TestDataProvider
         new Client { Id = 6, PassportNumber = 6666666, FullName = "Full name 6", BirthDate =  new DateOnly(1996, 6, 6)},
     ];
 
+
     public List<RentedCar> RentedCars;
 
     public TestDataProvider()
     {
-        RentedCars = new List<RentedCar> 
-        {
-            new RentedCar
+        RentedCars =
+        [
+            new RentedCar()
             {
                 Id = 1,
                 Car = Cars[1],
@@ -49,7 +50,7 @@ public class TestDataProvider
                 ReturnTime = DateTime.Now.AddDays(-4),
                 ReturnRentalPlace = RentalPlaces[4]
             },
-            new RentedCar
+            new RentedCar()
             {
                 Id = 2,
                 Car = Cars[3],
@@ -60,7 +61,7 @@ public class TestDataProvider
                 ReturnTime = DateTime.Now.AddDays(-3),
                 ReturnRentalPlace = RentalPlaces[5]
             },
-            new RentedCar
+            new RentedCar()
             {
                 Id = 3,
                 Car = Cars[3],
@@ -71,7 +72,7 @@ public class TestDataProvider
                 ReturnTime = DateTime.Now.AddDays(0),
                 ReturnRentalPlace = RentalPlaces[0]
             },
-            new RentedCar
+            new RentedCar()
             {
                 Id = 4,
                 Car = Cars[4],
@@ -82,7 +83,7 @@ public class TestDataProvider
                 ReturnTime = DateTime.Now.AddDays(-1),
                 ReturnRentalPlace = RentalPlaces[0]
             },
-            new RentedCar
+            new RentedCar()
             {
                 Id = 5,
                 Car = Cars[0],
@@ -93,7 +94,7 @@ public class TestDataProvider
                 ReturnTime = DateTime.Now.AddDays(-3),
                 ReturnRentalPlace = RentalPlaces[3]
             },
-            new RentedCar
+            new RentedCar()
             {
                 Id = 6,
                 Car = Cars[5],
@@ -104,7 +105,7 @@ public class TestDataProvider
                 ReturnTime = DateTime.Now.AddDays(-1),
                 ReturnRentalPlace = RentalPlaces[1]
             },
-            new RentedCar
+            new RentedCar()
             {
                 Id = 7,
                 Car = Cars[3],
@@ -115,7 +116,7 @@ public class TestDataProvider
                 ReturnTime = DateTime.Now.AddDays(-2),
                 ReturnRentalPlace = RentalPlaces[4]
             },
-            new RentedCar
+            new RentedCar()
             {
                 Id = 8,
                 Car = Cars[5],
@@ -126,7 +127,7 @@ public class TestDataProvider
                 ReturnTime = DateTime.Now.AddDays(-1),
                 ReturnRentalPlace = RentalPlaces[2]
             },
-            new RentedCar
+            new RentedCar()
             {
                 Id = 9,
                 Car = Cars[0],
@@ -137,7 +138,7 @@ public class TestDataProvider
                 ReturnTime = null,
                 ReturnRentalPlace = null
             },
-            new RentedCar
+            new RentedCar()
             {
                 Id = 10,
                 Car = Cars[4],
@@ -148,7 +149,7 @@ public class TestDataProvider
                 ReturnTime = null,
                 ReturnRentalPlace = null
             },
-            new RentedCar
+            new RentedCar()
             {
                 Id = 11,
                 Car = Cars[3],
@@ -159,7 +160,7 @@ public class TestDataProvider
                 ReturnTime = null,
                 ReturnRentalPlace = null
             },
-            new RentedCar
+            new RentedCar()
             { Id = 12,
                 Car = Cars[3],
                 RentalPlace = RentalPlaces[0],
@@ -169,7 +170,7 @@ public class TestDataProvider
                 ReturnTime = DateTime.Now.AddDays(-1),
                 ReturnRentalPlace = RentalPlaces[1]
             },
-            new RentedCar
+            new RentedCar()
             {
                 Id = 13,
                 Car = Cars[0],
@@ -180,7 +181,7 @@ public class TestDataProvider
                 ReturnTime = DateTime.Now.AddDays(-1),
                 ReturnRentalPlace = RentalPlaces[0]
             },
-            new RentedCar
+            new RentedCar()
             { Id = 14,
                 Car = Cars[4],
                 RentalPlace = RentalPlaces[2],
@@ -190,7 +191,7 @@ public class TestDataProvider
                 ReturnTime = DateTime.Now.AddDays(-2),
                 ReturnRentalPlace = RentalPlaces[5]
             },
-            new RentedCar
+            new RentedCar()
             {
                 Id = 15,
                 Car = Cars[3],
@@ -201,7 +202,7 @@ public class TestDataProvider
                 ReturnTime = DateTime.Now.AddDays(0),
                 ReturnRentalPlace = RentalPlaces[2]
             },
-            new RentedCar
+            new RentedCar()
             {
                 Id = 16,
                 Car = Cars[4],
@@ -212,7 +213,7 @@ public class TestDataProvider
                 ReturnTime = DateTime.Now.AddDays(-2),
                 ReturnRentalPlace = RentalPlaces[5]
             },
-            new RentedCar
+            new RentedCar()
             {
                 Id = 17,
                 Car = Cars[2],
@@ -223,7 +224,7 @@ public class TestDataProvider
                 ReturnTime = DateTime.Now.AddDays(0),
                 ReturnRentalPlace = RentalPlaces[0]
             },
-            new RentedCar
+            new RentedCar()
             {
                 Id = 18,
                 Car = Cars[5],
@@ -234,7 +235,7 @@ public class TestDataProvider
                 ReturnTime = DateTime.Now.AddDays(-2),
                 ReturnRentalPlace = RentalPlaces[2]
             },
-            new RentedCar
+            new RentedCar()
             {
                 Id = 19,
                 Car = Cars[0],
@@ -245,7 +246,7 @@ public class TestDataProvider
                 ReturnTime = DateTime.Now.AddDays(-2),
                 ReturnRentalPlace = RentalPlaces[5]
             },
-            new RentedCar
+            new RentedCar()
             {
                 Id = 20,
                 Car = Cars[4],
@@ -256,7 +257,7 @@ public class TestDataProvider
                 ReturnTime = DateTime.Now.AddDays(-1),
                 ReturnRentalPlace = RentalPlaces[1]
             },
-            new RentedCar
+            new RentedCar()
             {
                 Id = 21,
                 Car = Cars[3],
@@ -267,7 +268,7 @@ public class TestDataProvider
                 ReturnTime = DateTime.Now.AddDays(-1),
                 ReturnRentalPlace = RentalPlaces[1]
             }
-        };
+        ];
     }
 }
        

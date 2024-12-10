@@ -1,4 +1,3 @@
-using CarRentalApp.Domain;
 namespace CarRentalApp.Domain.Tests;
 
 public class CarRentalTest(TestDataProvider testDataProvider) : IClassFixture<TestDataProvider>
@@ -23,10 +22,10 @@ public class CarRentalTest(TestDataProvider testDataProvider) : IClassFixture<Te
     {
         var modelToSearch = "Model 2";
         var foundedClients = _testDataProvider.RentedCars
-            .Where(r => r.Car!.Model == modelToSearch)
+            .Where(r => r.Car.Model == modelToSearch)
             .Select(r => r.Client)
             .Distinct()
-            .OrderBy(c => c!.FullName)
+            .OrderBy(c => c.FullName)
             .ToList();
         Assert.Equal("Full name 4", foundedClients[0]!.FullName);
     }
