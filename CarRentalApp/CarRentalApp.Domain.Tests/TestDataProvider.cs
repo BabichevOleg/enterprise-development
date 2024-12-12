@@ -24,7 +24,7 @@ public class TestDataProvider
 
     public List<Client> Clients =
     [
-        new Client { Id = 1, PassportNumber = 1111111, FullName = "Full name 1", BirthDate =  new DateOnly(1991, 1, 1) },
+        new Client { Id = 1, PassportNumber = 1111111, FullName = "Full name 1", BirthDate =  new DateOnly(1991, 1, 1)},
         new Client { Id = 2, PassportNumber = 2222222, FullName = "Full name 2", BirthDate =  new DateOnly(1992, 2, 2)},
         new Client { Id = 3, PassportNumber = 3333333, FullName = "Full name 3", BirthDate =  new DateOnly(1993, 3, 3)},
         new Client { Id = 4, PassportNumber = 4444444, FullName = "Full name 4", BirthDate =  new DateOnly(1994, 4, 4)},

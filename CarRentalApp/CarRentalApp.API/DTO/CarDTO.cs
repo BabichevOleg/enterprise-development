@@ -1,12 +1,10 @@
-﻿namespace CarRentalApp.Domain;
+﻿namespace CarRentalApp.API.DTO;
 
-public class Car
+/// <summary>
+/// Класс, предоставляющий информацио об объекте Car для передачи данных.
+/// </summary>
+public class CarDTO
 {
-    /// <summary>
-    /// ID машины 
-    /// </summary>
-    public required int Id { set; get; } 
-
     /// <summary>
     /// Номер машины 
     /// </summary>
@@ -21,6 +19,4 @@ public class Car
     /// Цвет машины 
     /// </summary>
     public required string Color { set; get; }
-    
 }
-

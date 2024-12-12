@@ -4,9 +4,9 @@ public class CarRentalTest(TestDataProvider testDataProvider) : IClassFixture<Te
 {
     private readonly TestDataProvider _testDataProvider = testDataProvider;
 
-    //<summary>
-    //Проверка возврата всех автомобилей.
-    //</summary>
+    /// <summary>
+    /// Проверка возврата всех автомобилей.
+    /// </summary>
     [Fact]
     public void NumberOfCars()
     {
@@ -14,9 +14,9 @@ public class CarRentalTest(TestDataProvider testDataProvider) : IClassFixture<Te
         Assert.Equal(6, allCars.Count);
     }
 
-    //<summary>
-    //Проверка возврата клиентов, арендовавших машину определенной модели.
-    //</summary>
+    /// <summary>
+    /// Проверка возврата клиентов, арендовавших машину определенной модели.
+    /// </summary>
     [Fact]
     public void ClientsWhoHaveRentedCarsSpecialMarks()
     {
@@ -30,9 +30,9 @@ public class CarRentalTest(TestDataProvider testDataProvider) : IClassFixture<Te
         Assert.Equal("Full name 4", foundedClients[0]!.FullName);
     }
 
-    //<summary>
-    //Проверка возврата автомобилей, находившихся в аренде.
-    //</summary>
+    /// <summary>
+    /// Проверка возврата автомобилей, находившихся в аренде.
+    /// </summary>
     [Fact]
     public void CarsInRent()
     {
@@ -44,9 +44,9 @@ public class CarRentalTest(TestDataProvider testDataProvider) : IClassFixture<Te
         Assert.Equal(_testDataProvider.Cars[3], foundedCars[2].Car);
     }
 
-    //<summary>
-    //Проверка возврата информации о топ-5 наиболее арендуемых автомобилях.
-    //</summary>
+    /// <summary>
+    /// Проверка возврата информации о топ-5 наиболее арендуемых автомобилях.
+    /// </summary>
     [Fact]
     public void TopFiveCars()
     {
@@ -63,9 +63,9 @@ public class CarRentalTest(TestDataProvider testDataProvider) : IClassFixture<Te
         Assert.Equal(_testDataProvider.Cars[1], foundedCars[4]);
     }
 
-    //<summary>
-    //Проверка возврата количества аренд для конкретного автомобиля.
-    //</summary>
+    /// <summary>
+    /// Проверка возврата количества аренд для конкретного автомобиля.
+    /// </summary>
     [Fact]
     public void NumbersOfRental()
     {
@@ -83,7 +83,7 @@ public class CarRentalTest(TestDataProvider testDataProvider) : IClassFixture<Te
     }
 
     /// <summary>
-    ///Проверка возврата пункта проката с максимальным числом аренд.
+    /// Проверка возврата пункта проката с максимальным числом аренд.
     /// </summary>
     [Fact]
     public void RentalPlaceWithMostRents()

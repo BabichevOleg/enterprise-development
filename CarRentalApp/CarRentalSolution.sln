@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.10.35027.167
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarRentalApp.Domain", "CarRentalApp.Domain\CarRentalApp.Domain.csproj", "{2A7BF82F-BAAF-43BC-98A0-CB77287F7FE0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarRentalApp.Domain", "CarRentalApp.Domain\CarRentalApp.Domain.csproj", "{2A7BF82F-BAAF-43BC-98A0-CB77287F7FE0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarRentalApp.Domain.Tests", "CarRentalApp.Domain.Tests\CarRentalApp.Domain.Tests.csproj", "{4C309A71-9380-4307-A45E-C7A9E357CE43}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarRentalApp.Domain.Tests", "CarRentalApp.Domain.Tests\CarRentalApp.Domain.Tests.csproj", "{4C309A71-9380-4307-A45E-C7A9E357CE43}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarRentalApp.API", "CarRentalApp.API\CarRentalApp.API.csproj", "{D8FECBA6-4082-4297-85AF-C5725C3F46F9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{4C309A71-9380-4307-A45E-C7A9E357CE43}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4C309A71-9380-4307-A45E-C7A9E357CE43}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4C309A71-9380-4307-A45E-C7A9E357CE43}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D8FECBA6-4082-4297-85AF-C5725C3F46F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D8FECBA6-4082-4297-85AF-C5725C3F46F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D8FECBA6-4082-4297-85AF-C5725C3F46F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D8FECBA6-4082-4297-85AF-C5725C3F46F9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

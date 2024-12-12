@@ -1,12 +1,10 @@
-namespace CarRentalApp.Domain;
+﻿namespace CarRentalApp.API.DTO;
 
-public class Client
+/// <summary>
+/// Класс, предоставляющий информацио об объекте Cliebt для передачи данных.
+/// </summary>
+public class ClientDTO
 {
-    /// <summary>
-    /// ID клиента
-    /// </summary>
-    public required int Id { set; get; }
-
     /// <summary>
     /// номер паспорта 
     /// </summary>
@@ -21,6 +19,4 @@ public class Client
     /// Дата рождения 
     /// </summary>
     public required DateOnly BirthDate { set; get; }
-
 }
-

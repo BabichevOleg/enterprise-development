@@ -1,12 +1,12 @@
-namespace CarRentalApp.Domain;
+﻿using CarRentalApp.Domain;
 
-public class RentedCar
+namespace CarRentalApp.API.DTO;
+
+/// <summary>
+/// Класс, предоставляющий информацио об объекте RentedCar для передачи данных.
+/// </summary>
+public class RentedCarDTO
 {
-    /// <summary>
-    /// ID аренды
-    /// </summary>
-    public required int Id { set; get; }
-
     /// <summary>
     /// выданный автомобиль 
     /// </summary>
@@ -42,4 +42,3 @@ public class RentedCar
     /// </summary>
     public RentalPlace? ReturnRentalPlace { set; get; }
 }
-
