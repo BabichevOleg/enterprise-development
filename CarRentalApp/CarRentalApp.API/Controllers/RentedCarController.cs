@@ -19,7 +19,7 @@ public class RentedCarController(IRepository<RentedCar> repository, IMapper mapp
     /// </summary>
     /// <returns>Список всех машин и http status</returns>
     [HttpGet]
-    public ActionResult<IEnumerable<RentedCarDTO>> GetAll()
+    public ActionResult<IEnumerable<RentedCarDto>> GetAll()
     {
         return Ok(repository.GetAll().Select(mapper.Map<RentedCar>));
     }
@@ -30,7 +30,7 @@ public class RentedCarController(IRepository<RentedCar> repository, IMapper mapp
     /// <param name="id">Идентификатор арендованной машины</param>
     /// <returns>Возвращает арендованную машину с заданным идентификаторм</returns>
     [HttpGet("{id}")]
-    public ActionResult<RentedCarDTO> Get(int id)
+    public ActionResult<RentedCarDto> Get(int id)
     {
         var rentedCar = repository.Get(id);
 
@@ -45,7 +45,7 @@ public class RentedCarController(IRepository<RentedCar> repository, IMapper mapp
     /// <param name="obj">Машина, которую нужно добавить.</param>
     /// <returns>Возвращает DTO добавленной арендованной машины или null, при ошибке</returns>
     [HttpPost]
-    public ActionResult<RentedCarDTO> Post([FromBody] RentedCarDTO obj)
+    public ActionResult<RentedCarDto> Post([FromBody] RentedCarDto obj)
     {
         var rentedCar = mapper.Map<RentedCar>(obj);
         repository.Post(rentedCar);
@@ -60,7 +60,7 @@ public class RentedCarController(IRepository<RentedCar> repository, IMapper mapp
     /// <param name="obj">DTO объекта с новыми данными</param>
     /// <returns>Возвращает true, если информация обновилась, иначе false</returns>
     [HttpPut("{id}")]
-    public ActionResult Put(int id, [FromBody] RentedCarDTO obj)
+    public ActionResult Put(int id, [FromBody] RentedCarDto obj)
     {
         var rentedCar = mapper.Map<RentedCar>(obj);
         repository.Put(id, rentedCar);

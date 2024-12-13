@@ -8,7 +8,7 @@ public class Client
     public required int Id { set; get; }
 
     /// <summary>
-    /// номер паспорта 
+    /// Номер паспорта 
     /// </summary>
     public required int PassportNumber { set; get; }
 

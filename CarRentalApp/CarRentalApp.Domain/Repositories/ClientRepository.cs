@@ -19,7 +19,7 @@ public class ClientRepository : IRepository<Client>
     /// Возвращает клиента по заданному идентификатору.
     /// </summary>
     /// <param name="id">Идентификатор клиента</param>
-    /// <returns>Возвращает клиента с заданным идентификаторм</returns>
+    /// <returns>Возвращает клиента с заданным идентификатором</returns>
     public Client? Get(int id) => _clients.Find(c => c.Id == id);
 
     /// <summary>

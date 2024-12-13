@@ -3,7 +3,7 @@
 /// <summary>
 /// Класс, предоставляющий информацио об объекте Cliebt для передачи данных.
 /// </summary>
-public class ClientDTO
+public class ClientDto
 {
     /// <summary>
     /// номер паспорта 

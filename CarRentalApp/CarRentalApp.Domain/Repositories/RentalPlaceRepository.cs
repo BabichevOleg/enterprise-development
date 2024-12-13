@@ -10,23 +10,23 @@ public class RentalPlaceRepository : IRepository<RentalPlace>
     private int _id = 1;
 
     /// <summary>
-    /// Получает список всех прокатных пунтков.
+    /// Получает список всех прокатных пунктов.
     /// </summary>
     /// <returns>Возвращает список всех прокатных пунтков</returns>
     public IEnumerable<RentalPlace> GetAll() => _rentalPlaces;
 
     /// <summary>
-    /// Возвращает прокатный пунтк по заданному идентификатору.
+    /// Возвращает прокатный пункт по заданному идентификатору.
     /// </summary>
-    /// <param name="id">Идентификатор прокатного пунтка</param>
-    /// <returns>Возвращает прокатный пунтк с заданным идентификаторм</returns>
+    /// <param name="id">Идентификатор прокатного пункта</param>
+    /// <returns>Возвращает прокатный пунтк с заданным идентификатором</returns>
     public RentalPlace? Get(int id) => _rentalPlaces.Find(c => c.Id == id);
 
     /// <summary>
-    /// Добавляет новый прокатный пунтк в репозиторий.
+    /// Добавляет новый прокатный пункт в репозиторий.
     /// </summary>
-    /// <param name="obj">Прокатный пунтк, который нужно добавить.</param>
-    /// <returns>Возвращает добавленный прокатный пунтк</returns>
+    /// <param name="obj">Прокатный пункт, который нужно добавить.</param>
+    /// <returns>Возвращает добавленный прокатный пункт</returns>
     public RentalPlace Post(RentalPlace obj)
     {
         obj.Id = _id++;
@@ -35,9 +35,9 @@ public class RentalPlaceRepository : IRepository<RentalPlace>
     }
 
     /// <summary>
-    /// Обновляет информацию о прокатном пунтке по заданному идентификатору.
+    /// Обновляет информацию о прокатном пункте по заданному идентификатору.
     /// </summary>
-    /// <param name="id">Идентификатор прокатного пунтка</param>
+    /// <param name="id">Идентификатор прокатного пункта</param>
     /// <param name="obj">Объект с новыми данными</param>
     /// <returns>Возвращает true, если информация обновилась, иначе false</returns>
     public bool Put(int id, RentalPlace obj)
@@ -54,9 +54,9 @@ public class RentalPlaceRepository : IRepository<RentalPlace>
     }
 
     /// <summary>
-    /// Удаляет прокатный пунтк по заданному идентификатору.
+    /// Удаляет прокатный пункт по заданному идентификатору.
     /// </summary>
-    /// <param name="id">Идентификатор прокатного пунтка</param>
+    /// <param name="id">Идентификатор прокатного пункт</param>
     /// <returns>Возвращает true, если машина удалена, иначе false.</returns>
     public bool Delete(int id)
     {

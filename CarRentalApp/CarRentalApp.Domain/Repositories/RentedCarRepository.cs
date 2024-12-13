@@ -19,7 +19,7 @@ public class RentedCarRepository : IRepository<RentedCar>
     /// Возвращает арендованную машину по заданному идентификатору.
     /// </summary>
     /// <param name="id">Идентификатор арендованной машины</param>
-    /// <returns>Возвращает арендованную машину с заданным идентификаторм</returns>
+    /// <returns>Возвращает арендованную машину с заданным идентификатором</returns>
     public RentedCar? Get(int id) => _rentedCars.Find(c => c.Id == id);
 
     /// <summary>

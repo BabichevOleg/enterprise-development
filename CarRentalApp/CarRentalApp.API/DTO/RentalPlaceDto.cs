@@ -3,7 +3,7 @@
 /// <summary>
 /// Класс, предоставляющий информацио об объекте RentalPlace для передачи данных.
 /// </summary>
-public class RentalPlaceDTO
+public class RentalPlaceDto
 {
     /// <summary>
     /// Названия прокатного пункта

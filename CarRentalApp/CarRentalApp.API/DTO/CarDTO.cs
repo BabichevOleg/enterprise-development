@@ -3,7 +3,7 @@
 /// <summary>
 /// Класс, предоставляющий информацио об объекте Car для передачи данных.
 /// </summary>
-public class CarDTO
+public class CarDto
 {
     /// <summary>
     /// Номер машины 

@@ -19,7 +19,7 @@ public class ClientController(IRepository<Client> repository, IMapper mapper) : 
     /// </summary>
     /// <returns>Список всех клиентов и http status</returns>
     [HttpGet]
-    public ActionResult<IEnumerable<ClientDTO>> GetAll()
+    public ActionResult<IEnumerable<ClientDto>> GetAll()
     {
         return Ok(repository.GetAll().Select(mapper.Map<Client>));
     }
@@ -28,9 +28,9 @@ public class ClientController(IRepository<Client> repository, IMapper mapper) : 
     /// Возвращает DTO клиента по заданному идентификатору.
     /// </summary>
     /// <param name="id">Идентификатор клиента</param>
-    /// <returns>Возвращает клинета с заданным идентификаторм</returns>
+    /// <returns>Возвращает клиента с заданным идентификаторм</returns>
     [HttpGet("{id}")]
-    public ActionResult<ClientDTO> Get(int id)
+    public ActionResult<ClientDto> Get(int id)
     {
         var client = repository.Get(id);
 
@@ -45,7 +45,7 @@ public class ClientController(IRepository<Client> repository, IMapper mapper) : 
     /// <param name="obj">Клиент, которого нужно добавить.</param>
     /// <returns>Возвращает DTO добавленного клиента или null, при ошибке</returns>
     [HttpPost]
-    public ActionResult<ClientDTO> Post([FromBody] ClientDTO obj)
+    public ActionResult<ClientDto> Post([FromBody] ClientDto obj)
     {
         var client = mapper.Map<Client>(obj);
         repository.Post(client);
@@ -60,7 +60,7 @@ public class ClientController(IRepository<Client> repository, IMapper mapper) : 
     /// <param name="obj">DTO объекта с новыми данными</param>
     /// <returns>Возвращает true, если информация обновилась, иначе false</returns>
     [HttpPut("{id}")]
-    public ActionResult Put(int id, [FromBody] ClientDTO obj)
+    public ActionResult Put(int id, [FromBody] ClientDto obj)
     {
         var client = mapper.Map<Client>(obj);
         repository.Put(id, client);

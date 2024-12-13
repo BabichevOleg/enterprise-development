@@ -19,7 +19,7 @@ public class RentalPlaceController(IRepository<RentalPlace> repository, IMapper 
     /// </summary>
     /// <returns>Список всех машин и http status</returns>
     [HttpGet]
-    public ActionResult<IEnumerable<RentalPlaceDTO>> GetAll()
+    public ActionResult<IEnumerable<RentalPlaceDto>> GetAll()
     {
         return Ok(repository.GetAll().Select(mapper.Map<RentalPlace>));
     }
@@ -30,7 +30,7 @@ public class RentalPlaceController(IRepository<RentalPlace> repository, IMapper 
     /// <param name="id">Идентификатор пункта проката</param>
     /// <returns>Возвращает пункт проката с заданным идентификаторм</returns>
     [HttpGet("{id}")]
-    public ActionResult<RentalPlaceDTO> Get(int id)
+    public ActionResult<RentalPlaceDto> Get(int id)
     {
         var rentalPlace = repository.Get(id);
 
@@ -45,7 +45,7 @@ public class RentalPlaceController(IRepository<RentalPlace> repository, IMapper 
     /// <param name="obj">Пункт проката, который нужно добавить.</param>
     /// <returns>Возвращает DTO добавленного пункта проката или null, при ошибке</returns>
     [HttpPost]
-    public ActionResult<RentalPlaceDTO> Post([FromBody] RentalPlaceDTO obj)
+    public ActionResult<RentalPlaceDto> Post([FromBody] RentalPlaceDto obj)
     {
         var rentalPlace = mapper.Map<RentalPlace>(obj);
         repository.Post(rentalPlace);
@@ -60,7 +60,7 @@ public class RentalPlaceController(IRepository<RentalPlace> repository, IMapper 
     /// <param name="obj">DTO объекта с новыми данными</param>
     /// <returns>Возвращает true, если информация обновилась, иначе false</returns>
     [HttpPut("{id}")]
-    public ActionResult Put(int id, [FromBody] RentalPlaceDTO obj)
+    public ActionResult Put(int id, [FromBody] RentalPlaceDto obj)
     {
         var rentalPlace = mapper.Map<RentalPlace>(obj);
         repository.Put(id, rentalPlace);
