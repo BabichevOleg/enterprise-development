@@ -3,7 +3,6 @@ using CarRentalApp.Domain;
 using CarRentalApp.Domain.Repositories;
 using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
-using System.Security.Cryptography;
 
 namespace CarRentalApp.API.Controllers;
 
