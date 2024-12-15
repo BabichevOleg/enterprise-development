@@ -24,10 +24,10 @@ public class RentedCarController(IRepository<RentedCar> repository, IMapper mapp
     }
 
     /// <summary>
-    /// Возвращает DTO арендованной машины по заданному идентификатору.
+    /// Возвращает Dto арендованной машины по заданному идентификатору.
     /// </summary>
     /// <param name="id">Идентификатор арендованной машины</param>
-    /// <returns>Возвращает арендованную машину с заданным идентификаторм</returns>
+    /// <returns>Возвращает арендованную машину с заданным идентификатором</returns>
     [HttpGet("{id}")]
     public ActionResult<RentedCarDto> Get(int id)
     {
@@ -42,7 +42,7 @@ public class RentedCarController(IRepository<RentedCar> repository, IMapper mapp
     /// Добавляет новую арендованную машину в репозиторий.
     /// </summary>
     /// <param name="obj">Машина, которую нужно добавить.</param>
-    /// <returns>Возвращает DTO добавленной арендованной машины или null, при ошибке</returns>
+    /// <returns>Возвращает Dto добавленной арендованной машины или null, при ошибке</returns>
     [HttpPost]
     public ActionResult<RentedCarDto> Post([FromBody] RentedCarDto obj)
     {
@@ -56,7 +56,7 @@ public class RentedCarController(IRepository<RentedCar> repository, IMapper mapp
     /// Обновляет информацию об арендованной машине по заданному идентификатору.
     /// </summary>
     /// <param name="id">Идентификатор машины</param>
-    /// <param name="obj">DTO объекта с новыми данными</param>
+    /// <param name="obj">Dto объекта с новыми данными</param>
     /// <returns>Возвращает true, если информация обновилась, иначе false</returns>
     [HttpPut("{id}")]
     public ActionResult Put(int id, [FromBody] RentedCarDto obj)

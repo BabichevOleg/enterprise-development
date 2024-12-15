@@ -24,7 +24,7 @@ public class CarController(IRepository<Car> repository, IMapper mapper) : Contro
     }
 
     /// <summary>
-    /// Возвращает DTO машины по заданному идентификатору.
+    /// Возвращает Dto машины по заданному идентификатору.
     /// </summary>
     /// <param name="id">Идентификатор машины</param>
     /// <returns>Возвращает машину с заданным идентификатором</returns>
@@ -42,7 +42,7 @@ public class CarController(IRepository<Car> repository, IMapper mapper) : Contro
     /// Добавляет новую машину в репозиторий.
     /// </summary>
     /// <param name="obj">Машина, которую нужно добавить.</param>
-    /// <returns>Возвращает DTO добавленной машины или null, при ошибке</returns>
+    /// <returns>Возвращает Dto добавленной машины или null, при ошибке</returns>
     [HttpPost]
     public ActionResult<CarDto> Post([FromBody] CarDto obj)
     {
@@ -56,7 +56,7 @@ public class CarController(IRepository<Car> repository, IMapper mapper) : Contro
     /// Обновляет информацию о машине по заданному идентификатору.
     /// </summary>
     /// <param name="id">Идентификатор машины</param>
-    /// <param name="obj">DTO объекта с новыми данными</param>
+    /// <param name="obj">Dto объекта с новыми данными</param>
     /// <returns>Возвращает true, если информация обновилась, иначе false</returns>
     [HttpPut("{id}")]
     public ActionResult Put(int id, [FromBody] CarDto obj)

@@ -24,10 +24,10 @@ public class ClientController(IRepository<Client> repository, IMapper mapper) : 
     }
 
     /// <summary>
-    /// Возвращает DTO клиента по заданному идентификатору.
+    /// Возвращает Dto клиента по заданному идентификатору.
     /// </summary>
     /// <param name="id">Идентификатор клиента</param>
-    /// <returns>Возвращает клиента с заданным идентификаторм</returns>
+    /// <returns>Возвращает клиента с заданным идентификатором</returns>
     [HttpGet("{id}")]
     public ActionResult<ClientDto> Get(int id)
     {
@@ -42,7 +42,7 @@ public class ClientController(IRepository<Client> repository, IMapper mapper) : 
     /// Добавляет нового клиента в репозиторий.
     /// </summary>
     /// <param name="obj">Клиент, которого нужно добавить.</param>
-    /// <returns>Возвращает DTO добавленного клиента или null, при ошибке</returns>
+    /// <returns>Возвращает Dto добавленного клиента или null, при ошибке</returns>
     [HttpPost]
     public ActionResult<ClientDto> Post([FromBody] ClientDto obj)
     {
@@ -56,7 +56,7 @@ public class ClientController(IRepository<Client> repository, IMapper mapper) : 
     /// Обновляет информацию о клиенте по заданному идентификатору.
     /// </summary>
     /// <param name="id">Идентификатор клиента</param>
-    /// <param name="obj">DTO объекта с новыми данными</param>
+    /// <param name="obj">Dto объекта с новыми данными</param>
     /// <returns>Возвращает true, если информация обновилась, иначе false</returns>
     [HttpPut("{id}")]
     public ActionResult Put(int id, [FromBody] ClientDto obj)

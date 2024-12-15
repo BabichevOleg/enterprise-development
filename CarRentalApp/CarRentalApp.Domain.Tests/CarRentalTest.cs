@@ -27,7 +27,7 @@ public class CarRentalTest(TestDataProvider testDataProvider) : IClassFixture<Te
             .Distinct()
             .OrderBy(c => c.FullName)
             .ToList();
-        Assert.Equal("Full name 4", foundedClients[0]!.FullName);
+        Assert.Equal("Full name 4", foundedClients[0].FullName);
     }
 
     /// <summary>

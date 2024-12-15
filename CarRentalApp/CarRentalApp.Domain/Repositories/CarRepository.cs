@@ -19,7 +19,7 @@ public class CarRepository : IRepository<Car>
     /// Возвращает машину по заданному идентификатору.
     /// </summary>
     /// <param name="id">Идентификатор машины</param>
-    /// <returns>Возвращает машину с заданным идентификаторм</returns>
+    /// <returns>Возвращает машину с заданным идентификатором</returns>
     public Car? Get(int id) => _cars.Find(c => c.Id == id);
 
     /// <summary>

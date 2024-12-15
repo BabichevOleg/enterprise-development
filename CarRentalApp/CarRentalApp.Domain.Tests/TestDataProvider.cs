@@ -14,22 +14,22 @@ public class TestDataProvider
 
     public List<RentalPlace> RentalPlaces =
     [
-        new RentalPlace { Id = 1, Name = "Name 1", Address = "Address 1"},
-        new RentalPlace { Id = 2, Name = "Name 2", Address = "Address 2"},
-        new RentalPlace { Id = 3, Name = "Name 3", Address = "Address 3"},
-        new RentalPlace { Id = 4, Name = "Name 4", Address = "Address 4"},
-        new RentalPlace { Id = 5, Name = "Name 5", Address = "Address 5"},
-        new RentalPlace { Id = 6, Name = "Name 6", Address = "Address 6"}
+        new() { Id = 1, Name = "Name 1", Address = "Address 1"},
+        new() { Id = 2, Name = "Name 2", Address = "Address 2"},
+        new() { Id = 3, Name = "Name 3", Address = "Address 3"},
+        new() { Id = 4, Name = "Name 4", Address = "Address 4"},
+        new() { Id = 5, Name = "Name 5", Address = "Address 5"},
+        new() { Id = 6, Name = "Name 6", Address = "Address 6"}
     ];
 
     public List<Client> Clients =
     [
-        new Client { Id = 1, PassportNumber = 1111111, FullName = "Full name 1", BirthDate =  new DateOnly(1991, 1, 1)},
-        new Client { Id = 2, PassportNumber = 2222222, FullName = "Full name 2", BirthDate =  new DateOnly(1992, 2, 2)},
-        new Client { Id = 3, PassportNumber = 3333333, FullName = "Full name 3", BirthDate =  new DateOnly(1993, 3, 3)},
-        new Client { Id = 4, PassportNumber = 4444444, FullName = "Full name 4", BirthDate =  new DateOnly(1994, 4, 4)},
-        new Client { Id = 5, PassportNumber = 5555555, FullName = "Full name 5", BirthDate =  new DateOnly(1995, 5, 5)},
-        new Client { Id = 6, PassportNumber = 6666666, FullName = "Full name 6", BirthDate =  new DateOnly(1996, 6, 6)},
+        new() { Id = 1, PassportNumber = 1111111, FullName = "Full name 1", BirthDate =  new DateOnly(1991, 1, 1)},
+        new() { Id = 2, PassportNumber = 2222222, FullName = "Full name 2", BirthDate =  new DateOnly(1992, 2, 2)},
+        new() { Id = 3, PassportNumber = 3333333, FullName = "Full name 3", BirthDate =  new DateOnly(1993, 3, 3)},
+        new() { Id = 4, PassportNumber = 4444444, FullName = "Full name 4", BirthDate =  new DateOnly(1994, 4, 4)},
+        new() { Id = 5, PassportNumber = 5555555, FullName = "Full name 5", BirthDate =  new DateOnly(1995, 5, 5)},
+        new() { Id = 6, PassportNumber = 6666666, FullName = "Full name 6", BirthDate =  new DateOnly(1996, 6, 6)},
     ];
 
 

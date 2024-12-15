@@ -12,14 +12,14 @@ public class RentalPlaceRepository : IRepository<RentalPlace>
     /// <summary>
     /// Получает список всех прокатных пунктов.
     /// </summary>
-    /// <returns>Возвращает список всех прокатных пунтков</returns>
+    /// <returns>Возвращает список всех прокатных пунктов</returns>
     public IEnumerable<RentalPlace> GetAll() => _rentalPlaces;
 
     /// <summary>
     /// Возвращает прокатный пункт по заданному идентификатору.
     /// </summary>
     /// <param name="id">Идентификатор прокатного пункта</param>
-    /// <returns>Возвращает прокатный пунтк с заданным идентификатором</returns>
+    /// <returns>Возвращает прокатный пункт с заданным идентификатором</returns>
     public RentalPlace? Get(int id) => _rentalPlaces.Find(c => c.Id == id);
 
     /// <summary>

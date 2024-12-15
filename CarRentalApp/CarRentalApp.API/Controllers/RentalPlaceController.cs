@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace CarRentalApp.API.Controllers;
 
 /// <summary>
-/// Контролер по управлению машинами.
+/// Контролер по управлению пунктами проката.
 /// </summary>
 [Route("api/[controller]")]
 [ApiController]
@@ -23,10 +23,10 @@ public class RentalPlaceController(IRepository<RentalPlace> repository, IMapper 
     }
 
     /// <summary>
-    /// Возвращает DTO пункта проката по заданному идентификатору.
+    /// Возвращает Dto пункта проката по заданному идентификатору.
     /// </summary>
     /// <param name="id">Идентификатор пункта проката</param>
-    /// <returns>Возвращает пункт проката с заданным идентификаторм</returns>
+    /// <returns>Возвращает пункт проката с заданным идентификатором</returns>
     [HttpGet("{id}")]
     public ActionResult<RentalPlaceDto> Get(int id)
     {
@@ -41,7 +41,7 @@ public class RentalPlaceController(IRepository<RentalPlace> repository, IMapper 
     /// Добавляет новый пункт проката в репозиторий.
     /// </summary>
     /// <param name="obj">Пункт проката, который нужно добавить.</param>
-    /// <returns>Возвращает DTO добавленного пункта проката или null, при ошибке</returns>
+    /// <returns>Возвращает Dto добавленного пункта проката или null, при ошибке</returns>
     [HttpPost]
     public ActionResult<RentalPlaceDto> Post([FromBody] RentalPlaceDto obj)
     {
@@ -55,7 +55,7 @@ public class RentalPlaceController(IRepository<RentalPlace> repository, IMapper 
     /// Обновляет информацию о пункте проката по заданному идентификатору.
     /// </summary>
     /// <param name="id">Идентификатор пункта проката</param>
-    /// <param name="obj">DTO объекта с новыми данными</param>
+    /// <param name="obj">Dto объекта с новыми данными</param>
     /// <returns>Возвращает true, если информация обновилась, иначе false</returns>
     [HttpPut("{id}")]
     public ActionResult Put(int id, [FromBody] RentalPlaceDto obj)
