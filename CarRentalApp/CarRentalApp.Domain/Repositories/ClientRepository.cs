@@ -1,26 +1,25 @@
-﻿namespace CarRentalApp.Domain.Repositories;
+﻿using Microsoft.EntityFrameworkCore;
+
+namespace CarRentalApp.Domain.Repositories;
 
 /// <summary>
 /// Репозиторий для работы с сущностями Client.
 /// Реализует интерфейс IRepository для управления коллекцией клиентов.
 /// </summary>
-public class ClientRepository : IRepository<Client>
+public class ClientRepository(CarRentalAppDbContext context) : IRepository<Client>
 {
-    private readonly List<Client> _clients = [];
-    private int _id = 1;
-
     /// <summary>
     /// Получает список всех клиентов.
     /// </summary>
     /// <returns>Возвращает список всех клиентов</returns>
-    public IEnumerable<Client> GetAll() => _clients;
+    public IEnumerable<Client> GetAll() => context.Clients.ToList();
 
     /// <summary>
     /// Возвращает клиента по заданному идентификатору.
     /// </summary>
     /// <param name="id">Идентификатор клиента</param>
     /// <returns>Возвращает клиента с заданным идентификатором</returns>
-    public Client? Get(int id) => _clients.Find(c => c.Id == id);
+    public Client? Get(int id) => context.Clients.FirstOrDefault(c => c.Id == id);
 
     /// <summary>
     /// Добавляет нового клиента в репозиторий.
@@ -29,8 +28,8 @@ public class ClientRepository : IRepository<Client>
     /// <returns>Возвращает добавленного клиента</returns>
     public Client Post(Client obj)
     {
-        obj.Id = _id++;
-        _clients.Add(obj);
+        context.Add(obj);
+        context.SaveChanges();
         return obj;
     }
 
@@ -51,6 +50,8 @@ public class ClientRepository : IRepository<Client>
         oldValue.PassportNumber = obj.PassportNumber;
         oldValue.FullName = obj.FullName;
         oldValue.BirthDate = obj.BirthDate;
+
+        context.SaveChanges();
         return true;
     }
 
@@ -67,7 +68,8 @@ public class ClientRepository : IRepository<Client>
             return false;
         }
 
-        _clients.Remove(value);
+        context.Remove(value);
+        context.SaveChanges();
         return true;
     }
 }

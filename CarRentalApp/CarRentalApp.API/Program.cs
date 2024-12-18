@@ -2,6 +2,7 @@ using CarRentalApp.API;
 using CarRentalApp.Domain.Repositories;
 using CarRentalApp.Domain;
 using System.Reflection;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,12 +14,13 @@ builder.Services.AddSwaggerGen( options =>
     options.IncludeXmlComments(Path.Combine(AppContext.BaseDirectory, xmlFilename));
 });
 
-builder.Services.AddSingleton<IRepository<Car>, CarRepository>();
-builder.Services.AddSingleton<IRepository<Client>, ClientRepository>();
-builder.Services.AddSingleton<IRepository<RentalPlace>,  RentalPlaceRepository>();
-builder.Services.AddSingleton<IRepository<RentedCar>, RentedCarRepository>();
+builder.Services.AddScoped<IRepository<Car>, CarRepository>();
+builder.Services.AddScoped<IRepository<Client>, ClientRepository>();
+builder.Services.AddScoped<IRepository<RentalPlace>,  RentalPlaceRepository>();
+builder.Services.AddScoped<IRepository<RentedCar>, RentedCarRepository>();
 
-builder.Services.AddControllers();
+builder.Services.AddDbContext<CarRentalAppDbContext>(options =>
+    options.UseNpgsql(builder.Configuration.GetConnectionString("Postgre")));
 
 builder.Services.AddAutoMapper(typeof(Mapping));
 

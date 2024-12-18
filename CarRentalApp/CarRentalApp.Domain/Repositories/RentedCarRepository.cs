@@ -4,23 +4,20 @@
 /// Репозиторий для работы с сущностями RentedCar.
 /// Реализует интерфейс IRepository для управления коллекцией арендованных машин.
 /// </summary>
-public class RentedCarRepository : IRepository<RentedCar>
+public class RentedCarRepository(CarRentalAppDbContext context) : IRepository<RentedCar>
 {
-    private readonly List<RentedCar> _rentedCars = [];
-    private int _id = 1;
-
     /// <summary>
     /// Получает список всех арендованных машин.
     /// </summary>
     /// <returns>Возвращает список всех арендованных машин</returns>
-    public IEnumerable<RentedCar> GetAll() => _rentedCars;
+    public IEnumerable<RentedCar> GetAll() => context.RentedCars.ToList();
 
     /// <summary>
     /// Возвращает арендованную машину по заданному идентификатору.
     /// </summary>
     /// <param name="id">Идентификатор арендованной машины</param>
     /// <returns>Возвращает арендованную машину с заданным идентификатором</returns>
-    public RentedCar? Get(int id) => _rentedCars.Find(c => c.Id == id);
+    public RentedCar? Get(int id) => context.RentedCars.FirstOrDefault(r => r.Id == id);
 
     /// <summary>
     /// Добавляет новую арендованную машину в репозиторий.
@@ -29,8 +26,8 @@ public class RentedCarRepository : IRepository<RentedCar>
     /// <returns>Возвращает добавленную машину</returns>
     public RentedCar Post(RentedCar obj)
     {
-        obj.Id = _id++;
-        _rentedCars.Add(obj);
+        context.Add(obj);
+        context.SaveChanges();
         return obj;
     }
 
@@ -54,6 +51,7 @@ public class RentedCarRepository : IRepository<RentedCar>
         oldValue.Client = obj.Client;
         oldValue.Car = obj.Car;
         oldValue.IssueTime = obj.IssueTime;
+        context.SaveChanges();
         return true;
     }
 
@@ -70,7 +68,8 @@ public class RentedCarRepository : IRepository<RentedCar>
             return false;
         }
 
-        _rentedCars.Remove(value);
+        context.Remove(value);
+        context.SaveChanges();
         return true;
     }
 }

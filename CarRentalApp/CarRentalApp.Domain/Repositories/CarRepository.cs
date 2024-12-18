@@ -4,23 +4,20 @@
 /// Репозиторий для работы с сущностями Car.
 /// Реализует интерфейс IRepository для управления коллекцией машин.
 /// </summary>
-public class CarRepository : IRepository<Car>
+public class CarRepository(CarRentalAppDbContext context) : IRepository<Car>
 {
-    private readonly List<Car> _cars = [];
-    private int _id = 1;
-
     /// <summary>
     /// Получает список всех машин.
     /// </summary>
     /// <returns>Возвращает список всех машин</returns>
-    public IEnumerable<Car> GetAll() => _cars;
+    public IEnumerable<Car> GetAll() => context.Cars.ToList();
 
     /// <summary>
     /// Возвращает машину по заданному идентификатору.
     /// </summary>
     /// <param name="id">Идентификатор машины</param>
     /// <returns>Возвращает машину с заданным идентификатором</returns>
-    public Car? Get(int id) => _cars.Find(c => c.Id == id);
+    public Car? Get(int id) => context.Cars.FirstOrDefault(c => c.Id == id);
 
     /// <summary>
     /// Добавляет новую машину в репозиторий.
@@ -29,8 +26,8 @@ public class CarRepository : IRepository<Car>
     /// <returns>Возвращает добавленную машину</returns>
     public Car Post(Car obj)
     {
-        obj.Id = _id++;
-        _cars.Add(obj); 
+        context.Cars.Add(obj);
+        context.SaveChanges();
         return obj;
     }
 
@@ -51,6 +48,9 @@ public class CarRepository : IRepository<Car>
         oldValue.Model = obj.Model;
         oldValue.Color = obj.Color;
         oldValue.Number = obj.Number;
+
+        context.SaveChanges();
+
         return true;
     }
 
@@ -67,7 +67,8 @@ public class CarRepository : IRepository<Car>
             return false;
         }
 
-        _cars.Remove(value);
+        context.Remove(value);
+        context.SaveChanges();
         return true;
     }
 }
