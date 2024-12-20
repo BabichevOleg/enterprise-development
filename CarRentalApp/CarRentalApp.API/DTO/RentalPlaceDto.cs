@@ -1,7 +1,7 @@
 ﻿namespace CarRentalApp.API.DTO;
 
 /// <summary>
-/// Класс, предоставляющий информацио об объекте RentalPlace для передачи данных.
+/// Класс, предоставляющий информацию об объекте RentalPlace для передачи данных.
 /// </summary>
 public class RentalPlaceDto
 {

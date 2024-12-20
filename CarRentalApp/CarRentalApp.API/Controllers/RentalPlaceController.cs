@@ -46,8 +46,7 @@ public class RentalPlaceController(IRepository<RentalPlace> repository, IMapper 
     public ActionResult<RentalPlaceDto> Post([FromBody] RentalPlaceDto obj)
     {
         var rentalPlace = mapper.Map<RentalPlace>(obj);
-        repository.Post(rentalPlace);
-        return Ok();
+        return mapper.Map<RentalPlaceDto>(repository.Post(rentalPlace));
     }
 
 

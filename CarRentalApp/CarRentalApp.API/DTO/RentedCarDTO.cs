@@ -8,37 +8,37 @@ namespace CarRentalApp.API.DTO;
 public class RentedCarDto
 {
     /// <summary>
-    /// выданный автомобиль 
+    /// Выданный автомобиль 
     /// </summary>
     public required Car Car { set; get; }
 
     /// <summary>
-    /// пункт проката
+    /// Пункт проката
     /// </summary>
     public required RentalPlace RentalPlace { set; get; }
 
     /// <summary>
-    /// клиент получивший машину
+    /// Клиент получивший машину
     /// </summary>
     public required Client Client { set; get; }
 
     /// <summary>
-    /// время выдачи
+    /// Время выдачи
     /// </summary>
     public required DateTime IssueTime { set; get; }
 
     /// <summary>
-    /// срок аренды
+    /// Срок аренды
     /// </summary>
     public TimeSpan? RentalPeriod { set; get; }
 
     /// <summary>
-    /// время возврата
+    /// Время возврата
     /// </summary>
     public DateTime? ReturnTime { set; get; }
 
     /// <summary>
-    /// пункт, в который вернули автомобиль
+    /// Пункт, в который вернули автомобиль
     /// </summary>
     public RentalPlace? ReturnRentalPlace { set; get; }
 }

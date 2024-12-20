@@ -27,7 +27,7 @@ public class ClientController(IRepository<Client> repository, IMapper mapper) : 
     /// Возвращает Dto клиента по заданному идентификатору.
     /// </summary>
     /// <param name="id">Идентификатор клиента</param>
-    /// <returns>Возвращает клиента с заданным идентификатором</returns>
+    /// <returns>Возвращает клиента с заданным идентификатором.</returns>
     [HttpGet("{id}")]
     public ActionResult<ClientDto> Get(int id)
     {
@@ -47,8 +47,7 @@ public class ClientController(IRepository<Client> repository, IMapper mapper) : 
     public ActionResult<ClientDto> Post([FromBody] ClientDto obj)
     {
         var client = mapper.Map<Client>(obj);
-        repository.Post(client);
-        return Ok();
+        return mapper.Map<ClientDto>(repository.Post(client));
     }
 
 
