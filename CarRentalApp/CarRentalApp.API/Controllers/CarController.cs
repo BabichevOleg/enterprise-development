@@ -1,4 +1,4 @@
-﻿using CarRentalApp.API.DTO;
+﻿using CarRentalApp.API.Dto;
 using CarRentalApp.Domain;
 using CarRentalApp.Domain.Repositories;
 using AutoMapper;

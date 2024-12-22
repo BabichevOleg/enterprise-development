@@ -1,4 +1,4 @@
-﻿namespace CarRentalApp.API.DTO;
+﻿namespace CarRentalApp.API.Dto;
 
 /// <summary>
 /// Класс, предоставляющий информацию об объекте Client для передачи данных.
