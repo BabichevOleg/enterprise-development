@@ -1,4 +1,4 @@
-﻿using CarRentalApp.API.DTO;
+﻿using CarRentalApp.API.Dto;
 using CarRentalApp.Domain;
 using CarRentalApp.Domain.Repositories;
 using AutoMapper;
@@ -47,8 +47,7 @@ public class CarController(IRepository<Car> repository, IMapper mapper) : Contro
     public ActionResult<CarDto> Post([FromBody] CarDto obj)
     {
         var car = mapper.Map<Car>(obj);
-        repository.Post(car);
-        return Ok();
+        return mapper.Map<CarDto>(repository.Post(car));
     }
 
 

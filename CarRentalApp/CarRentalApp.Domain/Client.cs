@@ -17,7 +17,7 @@ public class Client
     /// <summary>
     /// Номер паспорта 
     /// </summary>
-    [Column("pusport_number")]
+    [Column("passport_number")]
     public required int PassportNumber { set; get; }
 
     /// <summary>

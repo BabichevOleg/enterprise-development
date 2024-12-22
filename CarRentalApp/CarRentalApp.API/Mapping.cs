@@ -1,5 +1,5 @@
 ﻿using AutoMapper;
-using CarRentalApp.API.DTO;
+using CarRentalApp.API.Dto;
 using CarRentalApp.Domain;
 
 namespace CarRentalApp.API;
